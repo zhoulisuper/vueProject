@@ -1,11 +1,11 @@
-const devServerConfig = require("./build/webpackResolve").default;
+const devServerConfig = require('./build/webpackResolve')
 // const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
   css: {
     // 打开开发阶段有骨架屏样式，但是所有样式无法热加载；关闭开发阶段无法加载骨架屏样式
-    extract: true
+    extract: true,
   },
   configureWebpack: {
     // plugins: [new BundleAnalyzerPlugin()],
@@ -40,24 +40,24 @@ module.exports = {
     devServer: {
       historyApiFallback: true,
       disableHostCheck: true,
-      host: "0.0.0.0",
+      host: '0.0.0.0',
       inline: true,
       port: 8080,
       hot: true,
-      contentBase: "./public",
+      contentBase: './public',
       proxy: {
-        "/api/": {
-          target: "http://localhost:8089",
+        '/api/': {
+          target: 'http://localhost:8089',
           pathRewrite: {
-            "^/api/": ""
+            '^/api/': '',
           },
-          secure: false
-        }
+          secure: false,
+        },
       },
-      before() {}
+      before() {},
     },
     resolve: {
-      ...devServerConfig
-    }
-  }
-};
+      ...devServerConfig,
+    },
+  },
+}

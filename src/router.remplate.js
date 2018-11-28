@@ -14,20 +14,7 @@ const router = {
       name: 'home',
       component: Home,
     },
-     {
-      path: '/About',
-      name: 'About',
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
-   {
-      path: '/Home',
-      name: 'Home',
-      component: () =>
-        import(/* webpackChunkName: "home" */ './views/Home.vue'),
-    },
-
-    /* 本路由文件由src/route.template.js文件生成，不要手动更改 */
+    /* template-placeholder */
     {
       name: 'NoMatch',
       path: '*',

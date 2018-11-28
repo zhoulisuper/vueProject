@@ -1,16 +1,19 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
+import HeaderStore from './store/headerStore'
+import RootStore from './store/rootStore'
+import SiderStore from './store/siderStore'
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
-  state: {
-
+const store = {
+  modules: {
+    HeaderStore,
+    RootStore,
+    SiderStore,
+    /* 本路由文件由src/store.template.js文件生成，不要手动更改 */
   },
-  mutations: {
+  strict: process.env.NODE_ENV !== 'production',
+}
 
-  },
-  actions: {
+Vue.use(Vuex)
 
-  },
-});
+export default new Vuex.Store(store)
