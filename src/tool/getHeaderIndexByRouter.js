@@ -4,15 +4,26 @@
  * @param {header的key} key
  * 传入顶部以及侧边栏的数组，返回header的name
  */
+// const getName = (item2, key) => {
+//   let result = ''
+//   if (item2.children && item2.children.length) {
+//     item2.children.forEach(item3 => {
+//       if (item3.name === key) {
+//         result = item.name
+//       }
+//     })
+//   }
+//   return result
+// }
 export function getHeaderKeyByRouter(menu, key) {
   let result = ''
+
   menu.forEach(item => {
     if (item.children && item.children.length) {
       item.children.forEach(item2 => {
         if (item2.name === key) {
           result = item.name
-        }
-        if (item2.children && item2.children.length) {
+        } else if (item2.children && item2.children.length) {
           item2.children.forEach(item3 => {
             if (item3.name === key) {
               result = item.name
@@ -38,8 +49,7 @@ export function getHeaderIndexByRouter(menu, key) {
       item.children.forEach(item2 => {
         if (item2.name === key) {
           result = index
-        }
-        if (item2.children && item2.children.length) {
+        } else if (item2.children && item2.children.length) {
           item2.children.forEach(item3 => {
             if (item3.name === key) {
               result = index

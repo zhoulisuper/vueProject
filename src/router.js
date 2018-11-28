@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import NoMatch from './components/NoMatch.vue'
-
+/* eslint-disable */
 Vue.use(Router)
 
 const router = {
@@ -25,6 +25,12 @@ const router = {
       name: 'Home',
       component: () =>
         import(/* webpackChunkName: "home" */ './views/Home.vue'),
+    },
+   {
+      path: '/User',
+      name: 'User',
+      component: () =>
+        import(/* webpackChunkName: "user" */ './views/User.vue'),
     },
 
     /* 本路由文件由src/route.template.js文件生成，不要手动更改 */

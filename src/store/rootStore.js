@@ -1,6 +1,6 @@
 const mutations = {
   setQueryFrom(state, v) {
-    state.queryFormStore = v
+    state.queryFormStore = Object.assign({}, v)
   },
 }
 const state = {

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <button @click='onConfirm'>按钮</button>
+    <el-button @click='onConfirm'>按钮</el-button>
   </div>
 </template>
 

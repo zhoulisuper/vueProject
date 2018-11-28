@@ -39,7 +39,6 @@ import { mapState, mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      collapse: false,
       name: 'linxin',
       siderMenu: [],
     }
@@ -70,6 +69,7 @@ export default {
   computed: {
     ...mapState('HeaderStore', ['activeIndex', 'headerMenu']),
     ...mapState('RootStore', ['themeColor']),
+    ...mapState('SiderStore', ['collapse']),
     username() {
       let username = localStorage.getItem('ms_username')
       return username ? username : this.name
@@ -85,8 +85,7 @@ export default {
       }
     },
     collapseChage() {
-      this.collapse = !this.collapse
-      this.setCollapse(this.collapse)
+      this.setCollapse(!this.collapse)
     },
     handleSelect(key, keyPath) {
       this.siderMenu = getSiderByHeaderIndex(this.$store.state.HeaderStore.headerMenu, key)
