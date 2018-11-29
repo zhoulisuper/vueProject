@@ -18,16 +18,14 @@
           label="姓名">
         </el-table-column>
         <el-table-column prop="age"
-          label="姓名">
+          label="年龄">
         </el-table-column>
         <el-table-column prop="sex"
-          label="姓名">
+          label="性别">
         </el-table-column>
       </el-table>
       <Pagination store="UserStore/fetchLists"
         :storeLists="lists" />
-      <!-- <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542365876811&di=ecd6534383e7ee1c485e714fce7f77a3&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F32fa828ba61ea8d3d8d6c33f9c0a304e251f5810.jpg"
-        class="reveal-top"> -->
     </el-card>
   </div>
 </template>

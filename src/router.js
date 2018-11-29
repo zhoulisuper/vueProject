@@ -21,6 +21,12 @@ const router = {
         import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
    {
+      path: '/Chart',
+      name: 'Chart',
+      component: () =>
+        import(/* webpackChunkName: "chart" */ './views/Chart.vue'),
+    },
+   {
       path: '/Home',
       name: 'Home',
       component: () =>
